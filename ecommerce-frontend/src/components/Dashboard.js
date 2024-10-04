@@ -66,10 +66,10 @@ function Dashboard({ user }) {
         {/* Button container */}
         <div className="button-group">
           <Link to="/cart">
-            <button className="btn btn-cart">Go to Cart</button>
+            <button className="btn btn-cart">Cart</button>
           </Link>
           <Link to="/browse-category">
-            <button className="btn btn-browse">Browse by Category</button>
+            <button className="btn btn-browse">Search</button>
           </Link>
           <button
             className="btn btn-remove"

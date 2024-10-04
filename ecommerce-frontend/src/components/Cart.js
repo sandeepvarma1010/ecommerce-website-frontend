@@ -115,7 +115,7 @@ function Cart() {
                 <th>Name</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>Actions</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>

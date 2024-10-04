@@ -75,22 +75,23 @@ function AdminDashboard({ user }) {
 
       <div className="button-group">
         <Link to="/create-product">
-          <button className="btn btn-add">Create a New Product</button>
+          <button className="btn btn-add">Add Product</button>
         </Link>
         <Link to="/update-product">
-          <button className="btn btn-add">Update a Product</button>
+          <button className="btn btn-back">Update Product</button>
         </Link>
         <Link to="/delete-product">
-          <button className="btn btn-remove">Delete a Product</button>
+          <button className="btn btn-remove">Delete Product</button>
         </Link>
         <Link to="/cart">
-          <button className="btn btn-add">View Cart</button>
+          <button className="btn btn-add">Cart</button>
         </Link>
         <Link to="/browse-category">
-          <button className="btn btn-add">Browse by Category</button>
+          <button className="btn btn-back">Search</button>
         </Link>
         <button className="btn btn-remove" onClick={handleLogout}>Log Out</button>
       </div>
+      
 
       <table className="product-table">
         <thead>
