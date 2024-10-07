@@ -69,7 +69,7 @@ function Dashboard({ user }) {
             <button className="btn btn-cart">Cart</button>
           </Link>
           <Link to="/browse-category">
-            <button className="btn btn-browse">Search</button>
+            <button className="btn btn-back">Search</button>
           </Link>
           <button
             className="btn btn-remove"

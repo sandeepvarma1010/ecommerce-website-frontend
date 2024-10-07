@@ -525,7 +525,22 @@ input[type="number"], input[type="text"], select {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
+/* Align the button groups */
+.button-group-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
 
+.button-group-left {
+  display: flex;
+  gap: 10px; /* Space between left-aligned buttons */
+}
+
+.button-group-right {
+  display: flex;
+  gap: 10px; /* Space between right-aligned buttons */
+}
 /* Add to cart button */
 .btn-add {
   background-color: #28a745;

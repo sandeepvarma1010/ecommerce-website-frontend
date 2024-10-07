@@ -2,7 +2,6 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-
 function AdminDashboard({ user }) {
   const [products, setProducts] = useState([]);
   const [message, setMessage] = useState('');
@@ -73,30 +72,37 @@ function AdminDashboard({ user }) {
         </div>
       )}
 
-      <div className="button-group">
-        <Link to="/create-product">
-          <button className="btn btn-add">Add Product</button>
-        </Link>
-        <Link to="/update-product">
-          <button className="btn btn-back">Update Product</button>
-        </Link>
-        <Link to="/delete-product">
-          <button className="btn btn-remove">Delete Product</button>
-        </Link>
-        <Link to="/cart">
-          <button className="btn btn-add">Cart</button>
-        </Link>
-        <Link to="/browse-category">
-          <button className="btn btn-back">Search</button>
-        </Link>
-        <button className="btn btn-remove" onClick={handleLogout}>Log Out</button>
+      <div className="button-group-container">
+        {/* Left-aligned buttons */}
+        <div className="button-group-left">
+          <Link to="/create-product">
+            <button className="btn btn-cart">Add Product</button>
+          </Link>
+          <Link to="/update-product">
+            <button className="btn btn-back">Update Product</button>
+          </Link>
+          <Link to="/delete-product">
+            <button className="btn btn-remove">Delete Product</button>
+          </Link>
+        </div>
+
+        {/* Right-aligned buttons */}
+        <div className="button-group-right">
+          <Link to="/cart">
+            <button className="btn btn-cart">Cart</button>
+          </Link>
+          <Link to="/browse-category">
+            <button className="btn btn-back">Search</button>
+          </Link>
+          <button className="btn btn-remove" onClick={handleLogout}>Log Out</button>
+        </div>
       </div>
-      
 
       <table className="product-table">
         <thead>
           <tr>
             <th>Product</th>
+            <th>Product ID</th>
             <th>Price</th>
             <th>Category</th>
             <th>Quantity</th>
@@ -107,6 +113,7 @@ function AdminDashboard({ user }) {
           {products.map((product) => (
             <tr key={product._id}>
               <td>{product.name}</td>
+              <td>{product._id}</td>
               <td>${product.price.toFixed(2)}</td>
               <td>{product.category}</td>
               <td>
